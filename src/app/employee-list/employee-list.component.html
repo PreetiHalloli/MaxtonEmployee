@@ -1,0 +1,28 @@
+<div class="search-hero">
+    <input class="form-control" type="text" name="search" placeholder="search"
+     [(ngModel)]="searchText" (keyup.enter)="onSearch(searchText)">
+</div>
+
+<button (click)="moreThanTwoYeaEexperience()">Experience more than 2 years</button>
+
+<button (click)="removeDevelopmentDeptCandidate()">Remove Development Dept candidate</button>
+
+<label>Select departments</label>
+<ng-select [items]="departments"
+           bindLabel="name"
+           placeholder="Select department"
+           [(ngModel)]="selectedCity">
+</ng-select>
+
+<table class="main">
+    <tr>
+        <th scope="col" sortable="name" (sort)="onSort($event)">Name</th>
+        <th scope="col" sortable="department" (sort)="onSort($event)">Department</th>
+        <th scope="col" sortable="joining_date" (sort)="onSort($event)">Joining_date</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+        <td>{{emp.name}}</td>
+        <td>{{emp.department}}</td>
+        <td>{{emp.joining_date}}</td>
+    </tr>
+</table>

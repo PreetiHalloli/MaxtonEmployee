@@ -1,0 +1,64 @@
+{
+    "candidate_data": [
+        {
+            "id": 11,
+            "name": "Ash",
+            "department": "Finance",
+            "joining_date": "8/10/2016"
+        },
+        {
+            "id": 12,
+            "name": "pppp",
+            "department": "HR",
+            "joining_date": "8/10/2016"
+        },
+        {
+            "id": 13,
+            "name": "qqqqq",
+            "department": "Development",
+            "joining_date": "8/10/2016"
+        },
+        {
+            "id": 14,
+            "name": "rrrrr",
+            "department": "Operations",
+            "joining_date": "8/10/2016"
+        },
+        {
+            "id": 15,
+            "name": "ssss",
+            "department": "Finance",
+            "joining_date": "8/10/2016"
+        },
+        {
+            "id": 16,
+            "name": "tttt",
+            "department": "HR",
+            "joining_date": "8/10/2016"
+        },
+        {
+            "id": 17,
+            "name": "uuuu",
+            "department": "Development",
+            "joining_date": "8/10/2016"
+        },
+        {
+            "id": 18,
+            "name": "vvvvvv",
+            "department": "Development",
+            "joining_date": "8/10/2016"
+        },
+        {
+            "id": 19,
+            "name": "wwww",
+            "department": "Operations",
+            "joining_date": "8/10/2016"
+        },
+        {
+            "id": 20,
+            "name": "xxxx",
+            "department": "Finance",
+            "joining_date": "8/10/2016"
+        }
+    ]
+}
