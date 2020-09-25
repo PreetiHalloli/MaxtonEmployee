@@ -1,1 +1,16 @@
-<p>employee-details works!</p>
+<h1>Employee Details</h1>
+
+<table class="main">
+    <td>
+        <tr>Name</tr>
+        <tr>Department</tr>
+        <tr>Joining Date</tr>
+    </td>
+    <td>
+        <tr>{{employee.name}}</tr>
+        <tr>{{employee.department}}</tr>
+        <tr>{{employee.joining_date}}</tr>
+    </td>
+</table>
+
+<button class="button" [routerLink]="['/list']">Back</button>

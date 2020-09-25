@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: EmployeeListComponent,
+    redirectTo: 'list',
+    pathMatch: 'full'
   },
   {
     path: 'list',
@@ -14,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'details/:id',
-    component: EmployeeListComponent
+    component: EmployeeDetailsComponent
   }
 ];
 

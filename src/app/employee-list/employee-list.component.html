@@ -1,28 +1,33 @@
-<div class="search-hero">
-    <input class="form-control" type="text" name="search" placeholder="search"
-     [(ngModel)]="searchText" (keyup.enter)="onSearch(searchText)">
-</div>
+<div>
+    <input class="search" type="text" name="search" placeholder="search" size="20" width= 150px
+     [(ngModel)]="searchText" (keyup.enter)="onSearch(searchText)"> &nbsp;
 
-<button (click)="moreThanTwoYeaEexperience()">Experience more than 2 years</button>
+<button class="button" (click)="moreThanTwoYeaEexperience()"> Candidate more than 2 years experience</button>&nbsp;
 
-<button (click)="removeDevelopmentDeptCandidate()">Remove Development Dept candidate</button>
-
-<label>Select departments</label>
+<button class="button" (click)="removeDevelopmentDeptCandidate()">Remove Development Dept candidates</button>&nbsp;
+</div><br>
 <ng-select [items]="departments"
            bindLabel="name"
-           placeholder="Select department"
-           [(ngModel)]="selectedCity">
-</ng-select>
+           placeholder="Select department to get count of candidate"
+           [(ngModel)]="selectedDept"
+           (change)="countOfCandidate(selectedDept)">
+</ng-select><br>
 
-<table class="main">
+<ng-container *ngIf="count && selectedDept" >
+        <h3>The selected department have {{count}} candidates.</h3>
+</ng-container><br><br>
+
+<table class="main" class="table table-striped">
     <tr>
-        <th scope="col" sortable="name" (sort)="onSort($event)">Name</th>
-        <th scope="col" sortable="department" (sort)="onSort($event)">Department</th>
-        <th scope="col" sortable="joining_date" (sort)="onSort($event)">Joining_date</th>
+        <th (click)="sort('name')" scope="col" >Name</th>
+        <th (click)="sort('department')" scope="col" >Department</th>
+        <th (click)="sort('joining_date')" scope="col" >Joining_date</th>
+        
     </tr>
-    <tr *ngFor="let emp of employees">
-        <td>{{emp.name}}</td>
+    <tr *ngFor="let emp of employees">  
+        <td><a [routerLink]="['/details',emp.id]">{{emp.name}}</a></td>
         <td>{{emp.department}}</td>
         <td>{{emp.joining_date}}</td>
     </tr>
 </table>
+
